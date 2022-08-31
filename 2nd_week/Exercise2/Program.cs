@@ -28,6 +28,7 @@
             {
                 Double x1 = (-b - Math.Sqrt(delta)) / (2.0 * a);
                 Double x2 = (-b + Math.Sqrt(delta)) / (2.0 * a);
+                Console.WriteLine("The equation has two diff roots is: x1 = " + x1 + ", x2 = " + x2);
             }
         }
     }
