@@ -9,9 +9,9 @@ namespace Exercise1
             get { return sides; }
             set
             {
-                if (value < 2 || value > 6)
+                if (value < 1 || value > 6)
                 {
-                    throw new ArgumentException("Sides must be in range [2, 6]");
+                    throw new ArgumentException("Sides must be in range [1, 6]");
                 }
 
                 sides = value;
