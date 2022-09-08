@@ -21,7 +21,7 @@ namespace Exercise1
         {
             Random rd = new Random();
 
-            return rd.Next(2, Sides + 1);
+            return rd.Next(1, Sides + 1);
         }
     }
 }
