@@ -1,24 +1,25 @@
-﻿using Exercise1;
-
-internal partial class Program
+﻿namespace Exercise1
 {
-    private static void Main(string[] args)
+    internal partial class Program
     {
-        Dice dice = new Dice();
-        int sides;
-
-        Console.Write("Sides of dice: ");
-        sides = Convert.ToInt32(Console.ReadLine());
-
-        try
+        private static void Main(string[] args)
         {
-            dice.setSides(sides);
+            Dice dice = new Dice();
+            int sides;
 
-            Console.WriteLine($"Random sides is {dice.roll()}");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e.Message);
+            Console.Write("Sides of dice: ");
+            sides = Convert.ToInt32(Console.ReadLine());
+
+            try
+            {
+                dice.Sides = sides;
+
+                Console.WriteLine($"Random sides is {dice.roll()}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
         }
     }
 }
