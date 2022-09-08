@@ -4,21 +4,24 @@ namespace Exercise1
     {
         private int sides;
 
-        public void setSides(int sides)
+        public int Sides
         {
-            if (sides < 1 || sides > 6)
+            get { return sides; }
+            set
             {
-                throw new ArgumentException("Sides must be in range [1, 6]");
+                if (value < 2 || value > 6)
+                {
+                    throw new ArgumentException("Sides must be in range [2, 6]");
+                }
+
+                sides = value;
             }
-
-            this.sides = sides;
         }
-
         public int roll()
         {
             Random rd = new Random();
 
-            return rd.Next(1, this.sides + 1);
+            return rd.Next(2, Sides + 1);
         }
     }
 }
